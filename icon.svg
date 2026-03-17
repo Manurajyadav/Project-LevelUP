@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0d0d1c"/>
+      <stop offset="100%" stop-color="#07070f"/>
+    </radialGradient>
+    <radialGradient id="aura" cx="50%" cy="45%" r="40%">
+      <stop offset="0%" stop-color="#4f8ef7" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#7c3aed" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="4" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="softglow"><feGaussianBlur stdDeviation="10" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="512" height="512" fill="url(#bg)"/>
+  <rect width="512" height="512" fill="url(#aura)"/>
+
+  <!-- Corner brackets -->
+  <rect x="16" y="16" width="480" height="480" rx="48" fill="none" stroke="#4f8ef7" stroke-width="2" stroke-opacity="0.4"/>
+  <line x1="16" y1="80" x2="16" y2="16" stroke="#4f8ef7" stroke-width="4" stroke-opacity="0.9"/>
+  <line x1="16" y1="16" x2="80" y2="16" stroke="#4f8ef7" stroke-width="4" stroke-opacity="0.9"/>
+  <line x1="432" y1="16" x2="496" y2="16" stroke="#4f8ef7" stroke-width="4" stroke-opacity="0.9"/>
+  <line x1="496" y1="16" x2="496" y2="80" stroke="#4f8ef7" stroke-width="4" stroke-opacity="0.9"/>
+  <line x1="16" y1="432" x2="16" y2="496" stroke="#4f8ef7" stroke-width="4" stroke-opacity="0.9"/>
+  <line x1="16" y1="496" x2="80" y2="496" stroke="#4f8ef7" stroke-width="4" stroke-opacity="0.9"/>
+  <line x1="432" y1="496" x2="496" y2="496" stroke="#4f8ef7" stroke-width="4" stroke-opacity="0.9"/>
+  <line x1="496" y1="432" x2="496" y2="496" stroke="#4f8ef7" stroke-width="4" stroke-opacity="0.9"/>
+
+  <!-- Eye glow halos — now centered vertically -->
+  <ellipse cx="256" cy="230" rx="140" ry="70" fill="#4f8ef7" opacity="0.07" filter="url(#softglow)"/>
+  <ellipse cx="256" cy="230" rx="90" ry="45" fill="#7c3aed" opacity="0.1" filter="url(#softglow)"/>
+
+  <!-- Eye diamond shape -->
+  <path d="M 106 230 Q 256 125 406 230 Q 256 335 106 230 Z" fill="#08081a" stroke="#4f8ef7" stroke-width="3" filter="url(#glow)"/>
+
+  <!-- Eye rings -->
+  <circle cx="256" cy="230" r="56" fill="#0a0a20" stroke="#4f8ef7" stroke-width="2.5" filter="url(#glow)"/>
+  <circle cx="256" cy="230" r="46" fill="#070714"/>
+  <circle cx="256" cy="230" r="40" fill="none" stroke="#7c3aed" stroke-width="1.5" stroke-opacity="0.7"/>
+  <circle cx="256" cy="230" r="32" fill="none" stroke="#4f8ef7" stroke-width="0.8" stroke-opacity="0.4"/>
+  <circle cx="256" cy="230" r="22" fill="#7c3aed" opacity="0.35"/>
+  <circle cx="256" cy="230" r="14" fill="#4f8ef7" opacity="0.7" filter="url(#glow)"/>
+  <circle cx="256" cy="230" r="7" fill="#ffffff" filter="url(#glow)"/>
+  <circle cx="268" cy="218" r="6" fill="white" opacity="0.5"/>
+  <circle cx="276" cy="225" r="3" fill="white" opacity="0.25"/>
+
+  <!-- Sword below eye -->
+  <polygon points="256,294 248,400 256,418 264,400" fill="#0d0d2a" stroke="#c8d0e8" stroke-width="1.5" stroke-linejoin="round"/>
+  <line x1="256" y1="294" x2="256" y2="414" stroke="#4f8ef7" stroke-width="1.5" opacity="0.8" filter="url(#glow)"/>
+  <rect x="230" y="388" width="52" height="10" rx="4" fill="#1a2a4a" stroke="#4f8ef7" stroke-width="1.5" filter="url(#glow)"/>
+  <rect x="250" y="398" width="12" height="28" rx="3" fill="#1a1030" stroke="#7c3aed" stroke-width="1.5"/>
+  <line x1="250" y1="407" x2="262" y2="407" stroke="#7c3aed" stroke-width="1.5" opacity="0.7"/>
+  <line x1="250" y1="416" x2="262" y2="416" stroke="#7c3aed" stroke-width="1.5" opacity="0.7"/>
+  <ellipse cx="256" cy="428" rx="9" ry="5" fill="#4f8ef7" opacity="0.9" filter="url(#glow)"/>
+  <circle cx="256" cy="296" r="5" fill="#f0c060" opacity="0.95" filter="url(#glow)"/>
+</svg>
